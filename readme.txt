@@ -16,7 +16,7 @@ On-demand invoice and packing-slip documents for WooCommerce orders, printable t
 
 HDWebmobile Invoices & Packing Slips adds a clean, print-ready invoice and packing slip to every WooCommerce order. Customers get a "Download Invoice" and "Download Packing Slip" link on their order page, and admins get matching "Print" links on the Edit Order screen. Both open a standalone, print-optimized page -- click Print, choose "Save as PDF", and you have your PDF. No PDF library is bundled with this plugin, which keeps it small and avoids an entire category of library-specific bugs.
 
-Every document request is checked before anything is shown. A leading competing plugin in this space has two disclosed 2026 vulnerabilities in exactly this area: one exposing customer documents without proper authorization, and one letting a logged-in attacker view a completely different customer's invoice just by changing a number in the URL. This plugin never trusts an order ID alone -- every request is authorized as the order's owner, an administrator, or (for guest orders) the order's own real secret key, using the same `hash_equals()`-based check WooCommerce's own core checkout pages use for guest order access.
+Every document request is checked before anything is shown -- this plugin never trusts an order ID alone. A request is authorized as the order's owner, an administrator, or (for guest orders) the order's own real secret key, using the same `hash_equals()`-based check WooCommerce's own core checkout pages use for guest order access.
 
 = Key Features =
 * On-demand Invoice (full line items, prices, totals, tax, payment method) and Packing Slip (shipping address and item quantities only, no prices) documents
