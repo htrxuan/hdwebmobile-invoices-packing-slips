@@ -29,10 +29,7 @@ $accent_color = !empty($options['accent_color']) ? $options['accent_color'] : ''
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><?php echo esc_html($title . ' #' . $order->get_order_number()); ?></title>
-    <?php HDINV_Template::print_styles(); ?>
-    <?php if ($accent_color) : ?>
-        <style>:root { --hdinv-accent: <?php echo esc_html($accent_color); ?>; }</style>
-    <?php endif; ?>
+    <?php HDINV_Template::print_styles($accent_color); ?>
 </head>
 <body>
     <button type="button" class="hdinv-print-button no-print" onclick="window.print()">

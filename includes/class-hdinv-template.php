@@ -36,11 +36,20 @@ class HDINV_Template
         );
     }
 
-    public static function print_styles()
+    /**
+     * Registers this plugin's own print stylesheet through WordPress's real enqueue system
+     * (never a raw echoed <style> tag or an inlined file_get_contents()), then prints only that
+     * one handle -- deliberately wp_print_styles('hdinv-print'), not the full wp_head(), since
+     * this standalone document page has no theme header/footer and calling wp_head() would pull
+     * in the entire site's front-end style/script queue (emoji scripts, RSD links, oEmbed
+     * discovery, every other plugin's enqueued assets) for no reason.
+     */
+    public static function print_styles($accent_color = '')
     {
-        $css_path = HDINV_PLUGIN_DIR . 'assets/css/hdinv-print.css';
-        if (file_exists($css_path)) {
-            echo '<style>' . file_get_contents($css_path) . '</style>'; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents, WordPress.Security.EscapeOutput.OutputNotEscaped -- reading and inlining our own plugin's static local CSS file, not user input.
+        wp_enqueue_style('hdinv-print', HDINV_PLUGIN_URL . 'assets/css/hdinv-print.css', array(), HDINV_VERSION);
+        if ($accent_color) {
+            wp_add_inline_style('hdinv-print', ':root { --hdinv-accent: ' . esc_html($accent_color) . '; }');
         }
+        wp_print_styles('hdinv-print');
     }
 }
