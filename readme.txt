@@ -33,6 +33,9 @@ Every document request is checked before anything is shown -- this plugin never 
 * No separate sequential invoice-numbering series -- the document uses the WooCommerce order number as its reference; some jurisdictions require a distinct, gapless invoice number for tax compliance, which this version doesn't provide
 * No bulk/multi-order printing -- one order, one document, at a time
 
+= Enjoying this plugin? =
+If it helps your site, please consider [leaving an honest review on WordPress.org](https://wordpress.org/support/plugin/hdwebmobile-invoices-packing-slips/reviews/#new-post) -- it helps other WordPress users find it. Found a problem or have an idea? Please [open a support topic](https://wordpress.org/support/plugin/hdwebmobile-invoices-packing-slips/) first so it can be fixed.
+
 == Installation ==
 
 1. Upload the plugin files to the `/wp-content/plugins/hdwebmobile-invoices-packing-slips` directory, or install the plugin through the WordPress plugins screen directly.
