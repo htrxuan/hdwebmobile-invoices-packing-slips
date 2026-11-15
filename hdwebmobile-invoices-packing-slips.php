@@ -4,7 +4,7 @@
  * Plugin Name: HDWebmobile Invoices & Packing Slips
  * Plugin URI: https://hdwebmobile.com/plugins/hdwebmobile-invoices-packing-slips/
  * Description: On-demand invoice and packing-slip documents for WooCommerce orders, printable to PDF from any browser. Every document request is authorization-checked, never trusting a bare order ID.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: htrxuan - Han Tran
  * Author URI: https://hdwebmobile.com/
  * License: GPLv2 or later
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('HDINV_VERSION', '1.0.0');
+define('HDINV_VERSION', '1.0.1');
 define('HDINV_PLUGIN_FILE', __FILE__);
 define('HDINV_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('HDINV_PLUGIN_URL', plugin_dir_url(__FILE__));

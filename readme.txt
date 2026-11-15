@@ -5,7 +5,7 @@ Tags: woocommerce, invoice, packing slip, pdf, order documents
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires Plugins: woocommerce
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -66,6 +66,9 @@ For complete visual control beyond the logo and accent color, a theme developer 
 3. The "Documents" links on the admin Edit Order screen.
 
 == Changelog ==
+
+= 1.0.1 =
+* The WooCommerce > HDWebmobile Overview page now has a short introduction to Store Guardian, a separate paid plugin that test-buys from your checkout every hour. It is hidden once Store Guardian is active. No changes to this plugin's own features.
 
 = 1.0.0 =
 * Initial release: on-demand invoice and packing-slip documents, print-to-PDF with no bundled library, server-side authorization on every document request (order owner, admin, or a valid order key), logo and accent-color customization, theme-overridable template.
