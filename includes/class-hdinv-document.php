@@ -8,9 +8,8 @@ if (!defined('ABSPATH')) {
 
 /**
  * The security-critical file. Every document request is authorized before anything is
- * rendered -- never trusting a bare order ID. This is the direct, deliberate fix for two real
- * 2026 CVEs in a competing plugin: sensitive data exposure (CVE-2026-49056) and an IDOR letting
- * an authenticated attacker view another customer's invoice (CVE-2026-13116).
+ * rendered -- never trusting a bare order ID -- so neither sensitive data exposure nor an IDOR
+ * letting a logged-in user view another customer's invoice is possible.
  */
 class HDINV_Document
 {
